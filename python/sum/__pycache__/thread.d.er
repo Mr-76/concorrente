@@ -1,0 +1,15 @@
+##[pylyzer] failed /home/vitor/git/concorrente/sum/thread.py 1733141109 912
+.threading = pyimport "<failure>"
+.<failure> = pyimport "<failure>"
+
+.time = pyimport "<failure>"
+
+
+.sumLock: Never
+.sum: {0}
+.count_up: () -> NoneType
+.count_down: () -> NoneType
+
+
+
+

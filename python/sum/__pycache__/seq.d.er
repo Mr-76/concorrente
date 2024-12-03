@@ -1,0 +1,9 @@
+##[pylyzer] failed /home/vitor/git/concorrente/sum/seq.py 1733141462 475
+.time = pyimport "<failure>"
+.<failure> = pyimport "<failure>"
+
+.sum: {0}
+.sum1: () -> NoneType
+.sum2: () -> NoneType
+
+

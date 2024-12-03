@@ -1,0 +1,18 @@
+##[pylyzer] failed /home/vitor/git/concorrente/barrier/barrier.py 1733145311 963
+.threading = pyimport "<failure>"
+.<failure> = pyimport "<failure>"
+
+.requests = pyimport "__init__"
+.__init__ = pyimport "__init__"
+
+
+
+.urllib = pyimport "<failure>"
+
+
+.barrier: Never
+.download: (url: Obj) -> Never
+.main: () -> NoneType
+
+e
+

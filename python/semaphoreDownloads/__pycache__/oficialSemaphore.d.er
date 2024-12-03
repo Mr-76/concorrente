@@ -1,0 +1,15 @@
+##[pylyzer] failed /home/vitor/git/concorrente/semaphoreDownloads/oficialSemaphore.py 1733144423 983
+.requests = pyimport "__init__"
+.__init__ = pyimport "__init__"
+
+.threading = pyimport "<failure>"
+.<failure> = pyimport "<failure>"
+
+.urllib = pyimport "<failure>"
+
+
+.downloads: {4}
+.semaphore: Never
+.download: (url: Obj) -> NoneType
+.main: () -> NoneType
+
