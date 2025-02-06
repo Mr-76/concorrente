@@ -1,0 +1,1 @@
+Half sorting with 2 threads a simple list.... bubble sort 
