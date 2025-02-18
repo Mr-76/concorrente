@@ -26,8 +26,8 @@ class MinhaFila <T> {
                     producerLock.await();
                     System.out.println("cannot enter more elemetns");
                 }
-                System.out.println("After add " + queue);
                 queue.add(element);
+                System.out.println("A " + queue);
                 consumerLock.signalAll();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
@@ -45,8 +45,8 @@ class MinhaFila <T> {
                     System.out.println("Cant put more elements....");
                     consumerLock.await();
                 }
-                System.out.println(queue+ " After remove");
                 queue.remove();
+                System.out.println("R " +  queue);
                 producerLock.signalAll();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
@@ -99,23 +99,27 @@ public class Main {
 
         int size = arrayOfThreads.size();
         Random rand2 = new Random();
-        
-        
 
-        ArrayList<Integer> selected = new ArrayList<Integer>();
+
+        ArrayList<Thread> arrayOfThreadsJoin = new ArrayList<Thread>();
+
         for (int i = 0; i < size; i ++){
-            int selected_value = rand2.nextInt(size);
-            selected.add(selected_value);
-
-            Thread t = arrayOfThreads.remove(selected_value);
-
-        }
-        for (Thread t : arrayOfThreads){
-            t.start();
+            int selected_value = rand2.nextInt(arrayOfThreads.size());
+            Thread threadt = arrayOfThreads.remove(selected_value);
+            threadt.start();
+            arrayOfThreadsJoin.add(threadt);
         }
 
-        for (Thread t : arrayOfThreads){
+
+        for (Thread t : arrayOfThreadsJoin){
             t.join();
+        }
+
+        //verify if its empty
+        if (arrayOfThreads.isEmpty()){
+            System.out.println("Emptyyyyyyy");
+        }else{
+            ;
         }
         minhaFila.result();
     }
