@@ -1,6 +1,7 @@
 import requests
 import threading
 import urllib.request
+#dowload all files related to linux isos a list of isos
 
 
 downloads = 4 #changing this will show the semaphores in action downloading the files

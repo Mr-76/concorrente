@@ -1,4 +1,5 @@
 import os
+#call at evety dodler cratea thread to find more files..... recursive function
 
 def find_and_count_pdf_files(base_dir):
     """
